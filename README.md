@@ -6,7 +6,7 @@ We are now in the opening phase of localizing HopeIsBack foundations. You may co
 
 The HopeIsBac’s board of directors may add solutions to Its 6 initial solutions being:
 
-    the comcomized agreement of equal ownership,
+    the [comcomized agreement](https://comcomized.github.io/Postnational-Solutions/) of equal ownership,
     the Liquid union model of fair distribution,
     the Qdolphin browser,
     the SolidarCoin/Rcoin,
