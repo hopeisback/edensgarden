@@ -1,6 +1,6 @@
 ## HopeIsBack Netwrok Foundations
 
-We are now in the opening phase of [localizing](https://en.wikipedia.org/wiki/Foundation_%28nonprofit%29) HopeIsBack foundations. You may contribute or apply to membership in its board of directors or trustees or add yourself as its participants Here. The statute of each foundation is:
+We are now in the opening phase of [localizing](https://en.wikipedia.org/wiki/Foundation_%28nonprofit%29) HopeIsBack foundations. You may contribute or apply to membership in its board of directors or trustees or add yourself as its participants [Here](http://namzezam.wikidot.com/main:contact/). The statute of each foundation is:
 - This foundation may contribute only to humanitarian solutions based on the beneficial movement of people between groups in which they have equal power, 
     - while solving problems raised because of the exponential increase of movement of products, services, capital, money and of information, when blocking people 
         - a global problematic phenomena producing higher aggression and more wars.
