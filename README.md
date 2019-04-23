@@ -9,6 +9,6 @@ The HopeIsBac’s board of directors may add solutions to Its 6 initial solution
 - the [comcomized agreement](https://comcomized.github.io/Postnational-Solutions/) of equal ownership,
 - the [Liquid union model](https://medium.com/@erezelul/to-stop-corruption-we-dont-no-need-to-imagine-but-to-realize-liquid-unions-liquid-union-and-97d3ceaeec14) of fair distribution,
 - the [Qdolphin browser](https://comcomist.github.io/Qdolphin/),
-- the SolidarCoin/Rcoin,
+- the [SolidarCoin/Rcoin](https://github.com/comcomized/RCoin),
 - the [Humentarin AGpl lisece](https://github.com/comcomized/RCoin),
 - the [iiaom crypto identity](https://github.com/comcomized/iiaom).
