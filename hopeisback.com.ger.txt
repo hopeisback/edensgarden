@@ -1,0 +1,107 @@
+HopeIsBack Foundations Netzwerk
+
+Wir, das HopeIsback NetWork, befinden uns nun in der Eröffnungsphase der Lokalisierung von HopeIsBack-Grundlagen. Die Stiftungen bieten, während sie beratend tätig sind, Lösungen für die Mutigen an, die ihre Schwierigkeiten kennen und ihre Hoffnung verloren haben, sie aber zurückgewinnen können. Die Satzung jeder Stiftung lautet:
+
+    Diese Stiftung kann nur zu humanitären Lösungen beitragen, die auf der positiven Bewegung von Menschen zwischen Gruppen basieren, in denen sie die gleiche Macht haben.
+        Der Vorstand von HopeIsBack kann Lösungen zu seinen 6 ursprünglichen Lösungen hinzufügen:
+            die comcomized Vereinbarung des gleichen Eigentums,
+            das Liquid-Union-Modell der fairen Verteilung,
+            den Qdolphin-Browser,
+            die SolidarCoin/Münze,
+            die humanitäre AGpl-Lizenz,X,no0returN
+            die iiaom Krypto-Identität.
+        Sie ist alles für die Lösung von Problemen gedacht, die sich aus der exponentiellen Zunahme des Waren-, Dienstleistungs-, Kapital-, Geld- und Informationsflusses ergeben, während sie gleichzeitig die Menschen blockiert - ein globales Problem, das zu höherer Aggression und mehr Kriegen führt.
+
+Dies ist der selbstorganisierte wirtschaftliche Strukturierungsaspekt von #HopeIsBack. Hier ist ein Übersetzer für Ihre Sprache. Kontaktieren Sie uns: Sie können einen Beitrag leisten oder sich an Mitglieder, Vorstände oder Treuhänder wenden oder sich selbst als Teilnehmer hinzufügen. Wir sind nun auf der Suche nach diesen 4 initiierenden Teammitgliedern:
+
+    Abstrakte Macher, die neue Ideen für die Umsetzung des Gesetzes einbringen.
+    Konzept-Mentoren für diese Ideen
+    Fundraiser für die Konzepte
+    Projektleiter bei der Umsetzung des Förderkonzepts
+====
+
+Die Dauer und Bedingungen des Besitzes von Aktien der Gemeinsamen Gesellschaft (ComCom)
+
+
+Präambel: Diese Eigentumslizenz soll vor Übernahmen schützen und kleine Einheiten mit größeren Einheiten rekursiv bauen und gleichzeitig die Mobilität und Gegenseitigkeit ihrer Eigentümer erhalten. Speziell entwickelt gegen große monopolisierende Spieler oder Heuchler, die nur zeitlich/teilweise die Ursache solcher Einheiten erfüllen. Es wird von jedem Käufer oder Verkäufer umgesetzt, der sich um die Bedingungen dieser Lizenz kümmern muss, wobei sich der minimale Schaden für die Einheiten eines Eigentümers im Wert des Anteils der Einheit widerspiegelt.
+
+Eine Eigentumsvereinbarung einer gemeinsamen Gesellschaft (ComCom) ist eine Eigentumsvereinbarung zwischen den Eigentümern der Gesellschaft. Die Vereinbarung oder die für ihre Änderung erforderliche qualifizierte Mehrheit ist unveränderlich. Das Eigentum an einem Teil der ComCom, einschliesslich eines ihrer Vermögenswerte, kann nur unter dieser Lizenz zwischen ihren Eigentümern übertragen werden:
+
+    Jeder Eigentümer ist entweder ein gewöhnlicher Eigentümer oder ein Peer Owner, der einem anderen Peer Owner gleichgestellt ist und nur ein Mensch oder eine ComCom sein kann;
+    Durch alle Halteschichten hindurch ist nur eine einzige Haltestelle pro Eigentümer erlaubt;
+    Die ComCom hat das erste Recht, jedes Eigentum an sich selbst zu erwerben, und jeder ihrer Eigentümer muss die Kriterien erfüllen;
+    Pro ComCom halten alle Peers zusammen gleichmässig (d) mal 100 Prozent der ComCom, so dass (v) reflektiert (m),
+        als (d) Zeiten (m) gleich (c) Zeiten (v) oder
+        als (d) Zeiten (i) gleich (c) Zeiten (n)
+        wo
+            (d) stellt seine Dezentralisierung dar, als 0<=(d)<=<=<=<=1,
+            (n) ist die Anzahl der Aktien pro Eigentümer, als (d)<=(n)<=(n)<=1,
+            c) ist die Anzahl ihrer Peer Owner, die von ihnen mit qualifizierter Mehrheit unabhängig voneinander zu entscheiden ist,
+            (i) ist die Anzahl der ausgegebenen Aktien, die auch die Anzahl der einzelnen Eigentümer ist - die Eigentümer durch alle Ebenen des Besitzes,
+            (m) ist sein geschätzter "Marktwert",
+            (v) ist der Eigentumswert jedes seiner Kollegen;
+        wobei der Änderungsbereich in (v) proportional zur Anzahl der Peers ist, so dass Steilheit=(nextV-v)*(c/v), wobei |steepness|<= Peer-Proportionalität eine konstante Zahl (default=1) ist;
+    Die Entscheidungsform in jeder ComCom muss für ihre Eigentümer transparent sein und umfasst:
+        die Schwelle für das Peer-Ratio-Verhältnis (die unabhängige ComCom-Behörde der Peers, die mit qualifizierter Mehrheit entscheidet), die über eine Politik entscheidet, die sowohl die Anzahl der Peers als auch die Anzahl der von jedem Peer gehaltenen Aktien betrifft.
+        das Medium - wie treffen sich die Eigentümer?
+        die Voranmeldung - die Zeit und die Informationen, die im Voraus anzugeben sind;
+    Die Art der ComCom kann nur einmal in ihrer Gründung entschieden werden, entweder als konstant oder veränderlich und offen oder verschlossen (was keine Eigentümer mehr erlaubt), wobei
+        alle einzelnen Eigentümer der ComCom über alle Ebenen hinweg, sind ihre Mitglieder (denn die Anzahl der Mitglieder der ComCom entspricht der Anzahl der Aktien),
+        wenn die ComCom versiegelt oder ihr (d) veränderbar ist, dann wird
+            jedes Mitglied muss zuerst zum Peer der ComCom werden und kann jederzeit in diese Position zurückkehren und
+            Die Anzahl der von einem Peer gehaltenen Aktien ist von den Peers mit qualifizierter Mehrheit unabhängig zu entscheiden.
+
+=======
+Die Allgemeinen Geschäftsbedingungen für Liquid Union
+
+Liquid Union ist jede juristische Person, die Projekte hat (jedes wird durch ihren Haushalt, ihre Bevölkerung und die zu versorgenden Bedürfnisse definiert), wobei ihre Teilnehmer Personen aus ihrer Bevölkerung sind, die regelmäßig eine der bestehenden oder neuen Niederlassungen eines solchen Projekts mit ihrer (Prepaid-)Personalunionskarte auswählen, während die Niederlassungen, die auch (in) Kleinunternehmen abgeschlossen werden könnten, anteilig mitfinanziert werden und bei denen die Teilnehmer nur an einer Niederlassung an jedem Projekt teilnehmen können und die Personals (nur bis zu einem vordefinierten maximalen Zeitraum) für die folgenden drei Ausschüsse der Union oder ihres Projekts wählen können:
+
+    Vorstand - Umsetzung der Beschlüsse der Teilnehmerabstimmungen,
+    Kontrolle - Berichterstattung an alle Teilnehmer und Benachrichtigung durch jeden Teilnehmer über mögliche Verbesserungen bei den Implementierungen des Vorstands,
+    Experten - Finalisierung von Vorschlägen für die Abstimmung der Teilnehmer, die von einem Teilnehmer für ein Thema oder ein Projekt vorgeschlagen werden.
+
+Die Gründung der Liquid Union erfolgt ab einer juristischen Person, oder deren Projekt oder als neue Art von Bundesorganisation, wie z.B. ein Staat oder eine Union, wie z.B. USA, Eu etc.
+
+Teilnehmer gegen Mitglieder einer solchen flüssigen Vereinigung: Die Mitglieder müssen auch ihr Teilnehmer sein. Der Teilnehmer kann, wenn gewünscht, aber nach Erfüllung der Verpflichtungen des Mitglieds, sein Mitglied werden. Die Abstimmung der Mitglieder kann nur erfolgen, nachdem alle Teilnehmer fair im Voraus benachrichtigt wurden und nur für die Auflösung der flüssigen Gewerkschaft/ihres Projekts oder die Einleitung eines Amtsenthebungsverfahrens gegen die Mitglieder ihrer Ausschüsse.
+
+Es wird als Fair-Distributor-Formular für (vereinigende) Basisorganisationen erstellt - eine neue progressive, demokratische, farbenfrohe und weiß gekennzeichnete Art und Weise, Ihre kritische Masse aufzubauen, während Sie sich kleinen Gruppen anschließen, wenn Sie ihre Bedürfnisse decken. Es ist für eine bessere Repräsentation und Integration zwischen verschiedenen Gruppen und Individuen gedacht, während es sich authentisch in einem fairen, partizipativen und dynamischen, aber weniger repräsentativen und nicht hierarchischen Organisationsmodell weiterentwickelt.
+
+======
+
+
+Qdolphin, ein qml-Browser für intelligente Menschen, wie in Q DO Love Peace and Happiness IN
+Qdolphin ist ein qml-Browser, der im qt-Rahmen zur Verbesserung der Privatsphäre und der Sicherheit in der progressiven Web-App-Benutzererfahrung (pwa ux) entwickelt wurde, indem er seinen Web-Browser unter und nicht als Sicherheitskettenstamm zur Verhinderung von Datenmissbrauch stellt, während er seinen Qdolphin Data Blurring (qdb)-Wert hinzufügt, wenn seine Entwicklung vom Client und nicht vom Server ausgeht, während er (durch seine Plugins) Dienste bereitstellt, deren Geschäft nicht die Daten sind, da diese Daten im Client verschlüsselt sind. Schließen Sie sich uns an in / durch diese Entwicklung Treffpunkte von t.me. 
+
+======
+
+
+SolidarCoin/Münze
+
+Zeitlich begrenzte Münzen, die für Peer Owners in einer fairen Umverteilung ausgegeben werden - CommunalCoin verliert ständig seinen Wert in der Zeit, da jedes Mitglied in der lokalen (mit Münzen) Gemeinschaft ständig eine gleiche Dividende erhält, die den verlorenen Wert der Münze in diesem System ausgleicht, und je kürzer die Lebensdauer der Münze ist, desto besser ist die Verteilung in dieser Gemeinschaft. 
+
+
+===============
+
+Humanitäre AGpl-Lizenz
+
+Humanitäre AGPL-Lizenz: Es ist Ihnen nicht gestattet, alles, was mit dem Ziel enthalten ist, Menschen zu töten, zu foltern oder ohne deren Zustimmung zu schädigen oder zu überwachen, zu verwenden, zu produzieren oder zu entwerfen, und jede darüber hinausgehende Erlaubnis wird hier nur unter der Agpl-Lizenz erteilt!
+
+Notizen:
+
+    Wir, die kreative Klasse, könnten die Kriegsindustrie durch humanitäre Lizenzen, wie dieses humanitäre Agpl;
+    Der Humanitarian agpl (hagpl) stellt, wie jeder andere humanitäre Open-Source (hos)-Code, das fünfte Kriterium "Keine Diskriminierung von Personen oder Gruppen", eine Bedingung für das sechste, "Keine Diskriminierung gegen Zielgebiete" und verbietet somit jede Diskriminierung zwischen Menschen durch die Verwendung dieses Codes.
+    Der Messertank-Tötungsfall: Ein nicht-humanitäres, übliches und wiederholtes Argument besagt, dass die Verwendung des Messers doppelt ist, zum Buttermachen - eine humanitäre, aber auch eine nicht-humanitäre Verwendung zum Töten von Menschen, aber der Fall, dass (der Fahrzeug-)Tank in seiner Spezifikation besser zum Töten von Menschen geeignet ist, ist nicht "auch humanitär", da er Butter auf das Brot legt. So würde bei der Entwicklung eines humanitären Codes aus einem solchen Messer die Tankanwendung bereits verboten werden.
+    Die Beendigung von Kriegen kann nicht durch ständige Hinzufügung von Kriegen erreicht werden, sondern durch den Kampf gegen die Industrie, die ihre Waffen herstellt, eine Industrie, die alle einzigartigen Dinge unter ihrer Kontrolle haben muss, eine Situation, die völlig von der Kreativität eines jeden abhängig ist, ein Fall, den die Entwicklung unter dem humanitären Gesichtspunkt verhindern kann.
+    Josef Mengele, bitte hör auf, Leute zu hacken: Argumente, die die Freiheit des Lernens durch Tun und das Hinzufügen von Wissen über alle anderen Werte stellen, können nur von Agenten oder Todesengeln als Pseudo-Religiöse akzeptiert werden, besonders in der heutigen Zeit, in der Maschinen in größeren Gebieten wettbewerbsfähiger sein können als Menschen.
+    Humanitäre Open Source kann die NSA in ihrer unnötigen und unverhältnismäßigen Gewohnheit, gegen die Internationalen Menschenrechtsstandards zu verstoßen, zumindest in Verlegenheit bringen oder teurer werden.
+    Duale Lizenzoption: "Wenn Sie die oben genannten humanitären Werte einhalten und nur, wenn der Code agpl-kompatiblen lizenzierten Code enthält, können Sie diesen Code unter agpl" verwenden.
+
+
+Auf jeden Fall ist lizenziertes gpl versus agpl, Anachronismus, der das Schließen von Open Source in Serverfarmen mit Dark Services ermöglicht.
+
+
+=============
+
+iiaom Krypto-Identität - Innerer Identifikator und Äußere Maske
+
+ ein Hash (persoanl image + seine symmetrisch verschlüsselte Datei) unter der humanitären Agpl-Lizenz 
