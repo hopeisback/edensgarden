@@ -693,13 +693,17 @@ a:hover {
 	background-image: linear-gradient(120deg,#EEF216 , #159957)
     -> 
 	background-image: linear-gradient(120deg,#EEF216 , #159957)
+ background-image: linear-gradient(to right, yellow,green,indigo,violet); 
+
+https://www.w3schools.com/css/css3_gradients.asp
+
 */
 .page-header {
 	color: #fff;
 	text-align: center;
 	background-color: #159957;
 	 
- background-image: linear-gradient(to right, yellow,green,indigo,violet); 
+ background-image: linear-gradient(to right, yellow,green,violet); 
 }
 
 @media screen and (min-width: 64em) {
