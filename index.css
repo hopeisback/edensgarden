@@ -235,7 +235,7 @@ html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%
 }
-body {
+body {   
 	margin: 0
 }
 article,
@@ -696,12 +696,18 @@ a:hover {
  background-image: linear-gradient(to right, yellow,green,indigo,violet); 
 
 https://www.w3schools.com/css/css3_gradients.asp
+.page-header {
+	color: #fff;
+
+	text-align: center;
+	background-color: #159957;
+	 
+ background-image: linear-gradient(to right, yellow,green,violet);
 
 */
 .page-header {
-	color: #fff;
+	color: red;
 	text-align: center;
-	background-color: #159957;
 	 
  background-image: linear-gradient(to right, yellow,green,violet); 
 }
@@ -808,6 +814,7 @@ https://www.w3schools.com/css/css3_gradients.asp
 	color: #159957
 }
 .main-content p {
+
 	margin-bottom: 1em
 }
 .main-content code {
