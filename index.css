@@ -4,20 +4,14 @@
 usecase:
       <div class="wrap-collabsible"> <input id="i1" class="toggle" type="checkbox" >
         <label for="i1" class="lbl-toggle"></label>
-        <div class="collapsible-content">
-          <div class="content-inner">
+        <div class="collapsible-content">  <div class="content-inner">
             <p> abcd</p>
             <div class="wrap-collabsible"> <input id="i2" class="toggle" type="checkbox" checked>
               <label for="i2" class="lbl-toggle"></label>
-              <div class="collapsible-content">
-                <div class="content-inner">
+              <div class="collapsible-content"> <div class="content-inner">
                   <p> abcd</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div>              </div>            </div>
+      </div>        </div>      </div>
 -------
 let myLabels = document.querySelectorAll('.lbl-toggle');
 
