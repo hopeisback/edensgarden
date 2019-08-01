@@ -165,7 +165,7 @@ a:active {
 
 .topnav a:hover, .dropdown:hover .dropbtn {
   background-color: #555;
-  color: purple;
+  color: yellow;/*green;purple;*/
 }
 
 .dropdown-content a:hover {
@@ -781,28 +781,21 @@ https://www.w3schools.com/css/css3_gradients.asp
 
 */
 .page-header {
-	color: red;
+	color: blue;/**/
 	text-align: center;
-	 
+/*padding:2rem 3rem;//5rem 6rem;*/
+	   
  background-image: linear-gradient(to right, yellow,green,violet); 
 }
 
-@media screen and (min-width: 64em) {
-	.page-header {
-		padding: 5rem 6rem
-	}
-}
+@media screen and (min-width: 64em) {.page-header {	padding: 3rem 6rem/*5rem 6rem*/
+}}
 @media screen and (min-width: 42em) and (max-width: 64em) {
-	.page-header {
-		padding: 3rem 4rem
-	}
-}
+	.page-header {		padding: 3rem 4rem}}
 @media screen and (max-width: 42em) {
-	.page-header {
-		padding: 2rem 1rem
-	}
-}
-
+	.page-header {		color: red;
+	padding: 2rem 1rem	}}
+/*
 .project-name {
 	margin-top: 0;
 	margin-bottom: 0.1rem
