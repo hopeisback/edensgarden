@@ -1,61 +1,29 @@
-
-/* colapsable css   thanks https://alligator.io/css/collapsible/ 
-
-usecase:
-      <div class="wrap-collabsible"> <input id="i1" class="toggle" type="checkbox" >
-        <label for="i1" class="lbl-toggle"></label>
-        <div class="collapsible-content">  <div class="content-inner">
-            <p> abcd</p>
-            <div class="wrap-collabsible"> <input id="i2" class="toggle" type="checkbox" checked>
-              <label for="i2" class="lbl-toggle"></label>
-              <div class="collapsible-content"> <div class="content-inner">
-                  <p> abcd</p>
-            </div>              </div>            </div>
-      </div>        </div>      </div>
--------
-let myLabels = document.querySelectorAll('.lbl-toggle');
-
-Array.from(myLabels).forEach(label => {
-  label.addEventListener('keydown', e => {
-    // 32 === spacebar
-    // 13 === enter
-    if (e.which === 32 || e.which === 13) {
-      e.preventDefault();
-      label.click();
-    };
-  });
-});
------------
-.lbl-toggle::before {
-  content: ' ';
-  display: inline-block;
-
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 5px solid currentColor;
-  vertical-align: middle;
-  margin-right: .7rem;
-  transform: translateY(-2px);
-
-  transition: transform .2s ease-out;
-}
-
-.collapsible-content {  max-height: 0px;  overflow: hidden;  transition: max-height .25s ease-in-out;}
-.toggle:checked + .lbl-toggle + .collapsible-content {  max-height: 350px;}
-
+/*
+    <div class="flding" id="this"> 
+	   <input id="ithis" class="toggle" type="checkbox"> 
+		 <label for="ithis" class="lbl-toggle">Title this</label>
+		   <div class="fcontent content-inner"> 
+		     <p> abcd</p>
+		     <div class="flding" id="this2"> 
+				<input id="ithis2" class="toggle" type="checkbox"> 
+					<label for="ithis2" class="lbl-toggle">Title this2</label>
+						<div class="fcontent content-inner"> 
+						<p> abcd2</p>
+			 </div></div>  
+	</div></div>  
 */
 
-input[type='checkbox'] { display: none;}
-.collapsible-content   { max-height: 0px;  overflow: hidden;  transition: max-height .25s ease-in-out;}
-.collapsible-content .content-inner {border-bottom: 1px solid rgba(0,255,0,0.3);}
-.toggle:checked + .lbl-toggle + .collapsible-content {  max-height: none;}
-.wrap-collabsible      { margin-bottom: 1.2rem 0;}
 
+input[type='checkbox']  { display: none;}
+.fcontent   { max-height: 0px;  overflow: hidden;  transition: max-height .25s ease-in-out;}
+.fcontent .content-inner{border-bottom: 1px solid rgba(0,255,0,0.3);}
+.toggle:checked + .lbl-toggle + .fcontent {max-height: none;}
+.flding      			{ margin-bottom: 1rem 0;}
 .toggle:checked + .lbl-toggle::before {  transform: rotate(90deg) translateX(-3px);}
 .toggle:checked + .lbl-toggle {  border-bottom-right-radius: 0;  border-bottom-left-radius: 0;}
 
-.lbl-toggle:hover      { color:purple;}
-.lbl-toggle            { display: block;color:#4CAF50;  cursor: pointer;  
+.lbl-toggle:hover       { color:purple;}
+.lbl-toggle             { display: block;color:#4CAF50;  cursor: pointer;  
                          border-radius: 1px;  transition: all 0.25s ease-out;}
 
 .lbl-toggle::before    {
