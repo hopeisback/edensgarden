@@ -18,6 +18,7 @@
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="index.css">
     <script>
+
     function diveto(){let u=document.URL,p=u.indexOf('?');
 		if(p===-1) return null;return u.substr(p+1);}
     function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)	 
@@ -25,37 +26,26 @@
     function relocateit(b,at=0){
 		b.scrollIntoView(true);
 		b.style.borderColor ='purple';
-		b.style.borderStyle = 'double none'; 
-		// ,at=0 ...to blink cursur at...
+		b.style.borderStyle = 'double none';
 		divein(b);
 	}
     function relocate(){let s=diveto();if(s)relocateit(document.getElementById(s));}
-	function select(n,i,l){relocateit(document.querySelectorAll(".content-inner")[n],i)
-							//console.log(n+","+i+","+l);
-							}
-	
-	function resultb(n,i,l,r){
+	function unfold(n){relocateit(document.querySelectorAll(".content-inner")[n])}							//console.log(n+","+i+","+l);
+	function resultb(n,r,i=0,l=0){
 			let bu 		= document.createElement("button");
 			bu.innerHTML= r.toString();
 		//	bu.onmouseover=marked;// on hover;
 			bu.type		="button";
-			bu.addEventListener("click", function(){select(n,i,l);}, false);
-			//select);//(n,i)
-	//		bu.onclick	="select(n,i)";//+ divein(item[n]);
-		return bu;}	
+			bu.addEventListener("click", function(){unfold(n);}, false);
+			return bu;}	
     function findit(a){//console.log(a);// 2 bottm filter or search (which do nothing unless it is pressed)		
 		let item = document.querySelectorAll(".content-inner");//document.querySelec­torAll("content-inner");// getting the hidden element from the doby.
-		let maxn = item.length;
-		//console.log("maxn="+maxn);
-		let r=0,n=0,l=a.length,contextl=40;
+		let maxn = item.length;		//console.log("maxn="+maxn);
+		let r=0,n=0;//,l=a.length,contextl=40;
 		let res=document.getElementById("searchresults");
 		while(res.childNodes[0]) res.removeChild(res.childNodes[0]);	//red.removeChild(list.childNodes[0]);  
-		for(;n<maxn && r<100;n++){			
-			let t=item[n].innerHTML,//outerHTML,//
-			i=t.indexOf(a);
-			//todo while ...: here could be nore results... t.sucstr(i,leng-i)			
-			if (i!==-1)	res.appendChild(resultb(n,i,l,r++));//console.log("fouond in n="+n);//				r++ ;
-		}}
+		for(;n<maxn && r<100;n++)if(item[n].innerHTML.indexOf(a)!==-1)
+		 	  res.appendChild(resultb(n,r++));}		
     </script>
   </head>
   <body onfocus="relocate()">
