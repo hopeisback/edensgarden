@@ -11,7 +11,11 @@
 						<p> abcd2</p>
 			 </div></div>  
 	</div></div>  
+.button {  background-color: #4CAF50;} 
+orangered
+button {  background-color: purple;} 
 */
+
 
 
 input[type='checkbox']  { display: none;}
@@ -103,11 +107,11 @@ a:active {
 }
 
 .dropdown .dropbtn {
-  font-size: 17px;    
+  font-size: 24px;    
   border: none;
   outline: none;
-  color: purple
-  padding: 14px 16px;
+  color:white ;/* purple black purple; font-size: 17px; padding: 14px 16px; padding: 14px 16px;*/
+  
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -188,7 +192,7 @@ a:active {
 .nav-bar__label {
     color: #fff;
     display: block;
-    padding: 10px 0;
+  padding: 10px 0;
     text-align: center;
     text-transform: uppercase;
     width: inherit;
@@ -746,23 +750,24 @@ https://www.w3schools.com/css/css3_gradients.asp
 	background-color: #159957;
 	 
  background-image: linear-gradient(to right, yellow,green,violet);
+ background-image: linear-gradient(to right, yellow,green,violet); 
 
 */
 .page-header {
-	color: blue;/**/
+	color: purple;/*blue*/
 	text-align: center;
 /*padding:2rem 3rem;//5rem 6rem;*/
 	   
- background-image: linear-gradient(to right, yellow,green,violet); 
+ background-image: linear-gradient(to right, orangered,green,violet); 
 }
 
-@media screen and (min-width: 64em) {.page-header {	padding: 3rem 6rem/*5rem 6rem*/
+@media screen and (min-width: 64em) {.page-header {	padding: 3rem 3rem/*5rem 6rem*/
 }}
 @media screen and (min-width: 42em) and (max-width: 64em) {
-	.page-header {		padding: 3rem 4rem}}
+	.page-header {		padding: 3rem 3rem}}
 @media screen and (max-width: 42em) {
-	.page-header {		color: red;
-	padding: 2rem 1rem	}}
+	.page-header {		color: black;/*red;*/
+	padding: 2rem 2rem	}}
 /*
 .project-name {
 	margin-top: 0;
@@ -998,3 +1003,4 @@ https://www.w3schools.com/css/css3_gradients.asp
 
 
 
+button {  background-color: #4CAF50;color: white;}/* purple #4CAF50*/ 

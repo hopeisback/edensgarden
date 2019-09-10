@@ -17,36 +17,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="index.css">
-    <script>
-
-    function diveto(){let u=document.URL,p=u.indexOf('?');
-		if(p===-1) return null;return u.substr(p+1);}
+     
+     <base href="file:///var/sid-root/a/github/processing/hopeisback/index.html">
+     <script>		//<base href="http://hopeisback.com/"> 
+	function diveto(){let u=document.URL,l=u.length-1;if(u[l]==='?'){//?id? is expected!
+		let q=u.indexOf('?')+1;if(q)return u.substr(q,l-q);}//,p=u.indexOf('?')//u.indexOf('#');//?id?  l+ (u[u.length - 1] === '?')+
+		return null;}//u.length	//    function xdiveto(){let u=document.URL,p=u.indexOf('?');		if(p===-1) return null;return u.substr(p+1);}	
     function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)	 
-		a.childNodes[1].setAttribute("checked","checked");}
-    function relocateit(b,at=0){
+						a.childNodes[1].setAttribute("checked","checked");}
+    function relocateit(b,at=0){//console.log("relocateit");
 		b.scrollIntoView(true);
 		b.style.borderColor ='purple';
 		b.style.borderStyle = 'double none';
-		divein(b);
-	}
+		divein(b);	}		
     function relocate(){let s=diveto();if(s)relocateit(document.getElementById(s));}
-	function unfold(n){relocateit(document.querySelectorAll(".content-inner")[n])}							//console.log(n+","+i+","+l);
-	function resultb(n,r,i=0,l=0){
-			let bu 		= document.createElement("button");
-			bu.innerHTML= r.toString();
+    function occurrencesOf(e,v){let r =[];
+		for(ontag= 0,l  = v.length,	el = e.length, i=0;i<el;){i=e.indexOf(v,i+l);
+			   if(i===-1)break; 			// console.log("occurrencesOf  - r,i:",r,i);
+			   ontag=e.lastIndexOf('<',i);//		console.log(x,i);
+			   let tag1=e[ontag+1], tag3=e.substr([ontag+1],3);
+			   if(tag1!=='a'&&tag3!=="<di")
+			   //   &&tag3!=="<la" and why having 
+			       r.push(i);}//// filling r with  found v  only if the tag is not of link	     
+					  return r;}	  // else console.log(i," was not pushed tag3=", tag3);			  //console.log("occurrencesOf  - r:",r);		
+	
+	function nunfold(n,oc={}){
+	relocateit(document.querySelectorAll(".content-inner")[n]);
+	if(oc.length){
+	// use 
+	let v=document.getElementById("searchItem").value;
+	 console.log(n,v);
+	window.find(v);
+		}
+	}
+
+function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-highlight/  Original JavaScript code by Chirp Internet: www.chirp.com.au // Please acknowledge use of this code by including this header.
+  let targetNode = id;//document.getElementById(id) || document.body;
+  let hiliteTag = tag || "MARK";
+  let skipTags = new RegExp("^(?:" + hiliteTag + "|SCRIPT|FORM|SPAN)$");
+  let colors = ["#ff6", "#a0ffff", "#9f9", "#f99", "#f6f"];
+  let wordColor = [];
+  let colorIdx = 0;
+  let matchRegExp = "";
+  let openLeft = false;
+  let openRight = false; 
+  let endRegExp = new RegExp('^[^\\w]+|[^\\w]+$', "g");// characters to strip from start and end of the input string 
+  let breakRegExp = new RegExp('[^\\w\'-]+', "g");// characters used to break up the input string into words
+
+  this.setEndRegExp = function(regex) {  endRegExp = regex;
+										 return endRegExp; };
+  this.setBreakRegExp = function(regex) {breakRegExp = regex;
+										return breakRegExp;  };
+  this.setMatchType = function(type){switch(type){
+      case "left": this.openLeft = false;  this.openRight = true;break;
+      case "right":this.openLeft = true;   this.openRight = false;break;
+      case "open": this.openLeft = this.openRight = true; break;
+      default:        this.openLeft = this.openRight = false;    }  };
+  this.setRegex = function(input){
+    input = input.replace(endRegExp, "");
+    input = input.replace(breakRegExp, "|");
+    input = input.replace(/^\||\|$/g, "");
+    if(input) { let       re = "(" + input + ")";
+      if(!this.openLeft)  re = "\\b" + re;
+      if(!this.openRight) re = re + "\\b";
+      matchRegExp = new RegExp(re, "i");
+      return matchRegExp; }
+    return false;  };
+  this.getRegex = function() { let retval = matchRegExp.toString();
+	retval = retval.replace(/(^\/(\\b)?|\(|\)|(\\b)?\/i$)/g, "");
+    retval = retval.replace(/\|/g, " ");
+    return retval;  };
+  this.hiliteWords = function(node){// recursively apply word highlighting
+    if(node === undefined || !node) 	return;
+    if(!matchRegExp) 					return;
+    if(skipTags.test(node.nodeName)) 	return;
+    if(node.hasChildNodes()){for(let i=0; i < node.childNodes.length; i++)
+								this.hiliteWords(node.childNodes[i]);}
+    if(node.nodeType == 3) { // NODE_TEXT
+      if((nv = node.nodeValue) && (regs = matchRegExp.exec(nv))) {
+        if(!wordColor[regs[0].toLowerCase()]) 
+			wordColor[regs[0].toLowerCase()] = colors[colorIdx++ % colors.length];
+        let match = document.createElement(hiliteTag);
+        match.appendChild(document.createTextNode(regs[0]));
+        match.style.backgroundColor = wordColor[regs[0].toLowerCase()];
+        match.style.color = "#000";
+        let after = node.splitText(regs.index);
+        after.nodeValue = after.nodeValue.substring(regs[0].length);
+        node.parentNode.insertBefore(match, after);
+      }    }  };//      }    };  };
+
+  
+  this.remove = function(){let arr = document.getElementsByTagName(hiliteTag);// remove highlighting
+    while(arr.length && (el = arr[0])) {let parent = el.parentNode;
+					parent.replaceChild(el.firstChild, el);
+					parent.normalize();    }  };
+  
+  this.apply = function(input){ this.remove();// start highlighting at target node
+    if(input === undefined || !(input = input.replace(/(^\s+|\s+$)/g, ""))) return;    
+    if(this.setRegex(input)) this.hiliteWords(targetNode);    
+    return matchRegExp;};
+
+}
+	
+	function removehtag(hiliteTag){let arr = document.getElementsByTagName(hiliteTag);// remove highlighting
+		 console.log("removehtag ",arr);
+    while(arr.length && (el = arr[0])) {let parent = el.parentNode;
+					parent.replaceChild(el.firstChild, el);
+					parent.normalize();    }  };
+					
+	function unfold(n,oc={}){if(oc.length){	
+		let myHilitor = new Hilitor(document.querySelectorAll(".content-inner")[n]); // id of the element to parse
+		myHilitor.apply(document.getElementById("searchItem").value);
+		} relocateit(document.querySelectorAll(".content-inner")[n]); }
+	 
+
+	function resultb(n,r,i={},l=0){let bu = document.createElement("button");
+			bu.innerHTML= l.toString(); // r.toString()+here we should have number of results in the element
 		//	bu.onmouseover=marked;// on hover;
-			bu.type		="button";
-			bu.addEventListener("click", function(){unfold(n);}, false);
-			return bu;}	
-    function findit(a){//console.log(a);// 2 bottm filter or search (which do nothing unless it is pressed)		
-		let item = document.querySelectorAll(".content-inner");//document.querySelec­torAll("content-inner");// getting the hidden element from the doby.
-		let maxn = item.length;		//console.log("maxn="+maxn);
-		let r=0,n=0;//,l=a.length,contextl=40;
-		let res=document.getElementById("searchresults");
-		while(res.childNodes[0]) res.removeChild(res.childNodes[0]);	//red.removeChild(list.childNodes[0]);  
-		for(;n<maxn && r<100;n++)if(item[n].innerHTML.indexOf(a)!==-1)
-		 	  res.appendChild(resultb(n,r++));}		
+			bu.type		="button";	
+//			bu.background-color ='purple';				
+			bu.addEventListener("click", function(){unfold(n,i);}, false);			
+			return bu;}
+				
+	function cleaning(alsov=true){let res=document.getElementById("searchresults");
+	  while(res.childNodes[0]) res.removeChild(res.childNodes[0]);
+	  document.getElementById("searchmsg").textContent='';
+	  if(alsov){
+		  console.log("alsov in cleaning ");
+		  removehtag( "MARK");//document.getElementById("searchItem").value||
+	  document.getElementById("searchItem").value='';
+  }
+	  return res;}
+	  		
+	function findit(a){if(a){//		 console.log("findit a", a);
+		let res=cleaning(false);
+	  let item = document.querySelectorAll(".content-inner"),//document.querySelec­torAll("content-inner");// getting the hidden element from the doby.
+		  maxn = item.length,  r = 0,	n = 0, t = 0;//console.log("maxn="+maxn);
+	  for(;n<maxn&&r<100;n++){let i=occurrencesOf(item[n].innerHTML,a);//		  let i=occurrencesOf(item[n].outerHTML,a);//item[n].outerHTML.indexOf(a);//item[n].innerHTML.indexOf(a);					
+		   if (i.length){res.appendChild(resultb(n,r++,i,i.length));
+				t+=i.length;}}
+		   document.getElementById("searchmsg").textContent=t.toString();
+		  return t;	 } 
+		  else cleaning(true);;
+		  }//let lv=a.length;//			   console.log(n +"startloop i="+i); //v=document.getElementById("searchItem").value,
+					  	
     </script>
+
   </head>
   <body onfocus="relocate()">
 	  <!--
@@ -54,9 +170,10 @@
         <h2 id="hopeisback-network-foundations2" style="text-align: center;">The
             Platform of the HopeIsBack Foundations Network</h2>
       </<section> </div>
+
       -->
     <section class="page-header">
-		         
+    		         
       <div class="dropdown"> 
 	   <button class="dropbtn">Net <i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content"> <a href="http://liquidunions.com/" target="_blank">Sub
@@ -76,13 +193,10 @@
             target="_blank">google</a> <a href="https://www.prekladac.cz/" target="_blank">prekladac</a>
         </div>
       </div>
-       <a href="http://hopeisback.com/"
-        target="_blank" title="We are the #HopeIsBack #Foundations #Network Our #task is to #Stop #Normalized #Corruption We #build new #economy in a #colorful and #liquid #decentralized #way #Contact us to #participate http://hopeisback.com/  We look for #management #conceptor #fundraiser #projectmanager">
-        <img src="index_files/hopeisbackNetWork.png" alt="HopeISBack NetWork" title="Hope Is Back The HopeIsBack Foundations Network" class="responsive">
-     </a> 
-   
+       
+      
      </section>
-    <div align="center"> <a href="?registering"> <img src="index_files/start.png"
+    <div align="center"> <a href="?registering?"> <img src="index_files/start.png"
           alt="Start by Contact" title="Start by Contact" border="0" width="42"
           height="42"></a> <a href="https://t.me/s/hopeisback"> <img src="index_files/telegram.png"
           alt="Our channel on telegram" title="Our channel on telegram" border="0"
@@ -94,7 +208,9 @@
         <img alt="facebbook" src="index_files/f.png" title="HopeIsBack in facebook"
           border="0" width="42" height="42"></a>
 		<div>
+         
          <input id="searchItem"  oninput="findit(this.value)" placeholder="search" type="text"> 
+         <span id="searchmsg" onclick="cleaning()"  style="cursor:pointer"></span>
          <div id="searchresults"></div>
         </div>      
     </div>
@@ -105,7 +221,7 @@
             Platform of the HopeIsBack Foundations Network</h2>
           <h3 style="text-align: center;">Our network pave the way we, the many,
             can by ourselves defeat the controlling few (- the lunatic elites)
-            and we are starting in our <a href="?core">degentrification and
+            and we are starting in our <a href="?core?">degentrification and
               comcomized real-estate</a>. This hopeisback network is made by and
             for the brave ones who know their difficulties, lost their hope, but
             are able to gain it back. </h3>
@@ -175,19 +291,19 @@
                         blocking people - <i>a global problematic phenomenos
                           producing higher passivity or aggression and more wars</i>.
                       </center>
-                      <p>We, the <a href="?statute">HopeIsback NetWork</a>,
+                      <p>We, the <a href="?statute?">HopeIsback NetWork</a>,
                         which are the self organized economic structuring aspect
                         of the <a href="https://www.google.com/search?q=hopeisback"
                           target="_blank">#HopeIsBack</a>, are now in the
                         opening phase of <a href="https://en.wikipedia.org/wiki/Foundation_%28nonprofit%29"
                           target="_blank">localizing</a> HopeIsBack foundations,
-                        <a href="?registering">connecting and looking for </a>
+                        <a href="?registering?">connecting and looking for </a>
                         lawyers to register and support and for foundation
                         managers, who can show their abilities and their social
                         ambitions.</p>
                       <ul>
-                        <li> We are now building, and you could <a href="?registering">apply</a>
-                          to join us by signing with us the <a href="?comcomized">comcomized</a>
+                        <li> We are now building, and you could <a href="?registering?">apply</a>
+                          to join us by signing with us the <a href="?comcomized?">comcomized</a>
                           agreement, the i.comcomized.com to provide the
                           atomization of transparency and authentication of the
                           interactions and statements in comcom and liquid union
@@ -367,7 +483,7 @@
                                         is to be&nbsp;independently decided in <span
                                           class="st">qualified majority</span>
                                         by the peers.</li>
-                                      <center><a href="?comcomizedmore">more
+                                      <center><a href="?comcomizedmore?">more
                                           about this..</a></center>
                                     </ul>
                                   </li>
@@ -471,7 +587,7 @@
                                   selves up in a fair, participative and
                                   dynamic, but less representative and non
                                   hierarchical, model of organization.</em></p>
-                              <center><a href="?aboutlu">more about this..</a></center>
+                              <center><a href="?aboutlu?">more about this..</a></center>
                             </div>
                           </div>
                         </div>
@@ -598,7 +714,7 @@
                             </div>
                           </div>
                         </div>
-                        <a href="?Hagpl" target="_top"></a></li>
+                        <a href="?Hagpl?" target="_top"></a></li>
                       <li>
                         <div class="flding"> <input id="iiiaom" class="toggle"
                             type="checkbox"> <label for="iiiaom" class="lbl-toggle"><a
@@ -613,7 +729,7 @@
                             </div>
                           </div>
                         </div>
-                        <a href="?iiaom" target="_top"></a></li>
+                        <a href="?iiaom?" target="_top"></a></li>
                     </ul>
                   </li>
                   <li>
@@ -783,7 +899,7 @@
             <div class="flding" id="comcomizedabout"> <input id="icomcomizedabout"
                 class="toggle" type="checkbox"> <label for="icomcomizedabout" class="lbl-toggle">Learn
                 more about ComComized agreements</label>
-              <div class="fcontent content-inner"> The <a href="?comcomized" target="_top">comcomized
+              <div class="fcontent content-inner"> The <a href="?comcomized?" target="_top">comcomized
                   agreement</a> of equal ownership is made to avoid been taken
                 over by the huge corporations, while giving a room for
                 cooperating with some "normal" business making - here are some
@@ -798,7 +914,7 @@
                     by making any bailout<strong>-</strong>privatization-cycle
                     together with the citiznes involved as comcom players
                     instead of only some few huge companies</li>
-                  <li>our <a href="?core">core of development</a> including
+                  <li>our <a href="?core?">core of development</a> including
                     the&nbsp; real estate comcom and granting concom granting
                     grantees/insurance to its members</li>
                 </ul>
@@ -807,7 +923,7 @@
             <div class="flding" id="aboutlu"> <input id="iaboutlu" class="toggle"
                 type="checkbox"> <label for="iaboutlu" class="lbl-toggle">Learn
                 more about liquid unions.. </label>
-              <div class="fcontent content-inner"> the <a href="?liquidunion" target="_top">Liquid
+              <div class="fcontent content-inner"> the <a href="?liquidunion?" target="_top">Liquid
                   union model</a> of fair distribution (compared with
                 liquid/delegative- democracy telling how to decide and produce
                 or serve, liquid union is about how to get organized to get and
@@ -842,7 +958,7 @@
               border="0" width="42" height="42"> <b>Join</b> us in your ways:</label>
           <div class="fcontent content-inner">
             <center>
-              <p>Contact us for <a href="?recruting" title="recruting">recruiting</a>
+              <p>Contact us for <a href="?recruting?" title="recruting">recruiting</a>
                 or by <a href="https://twitter.com/search?q=%23art4hopeisback">#art4HopeIsBack</a>,
                 we can even help in forming your<i> foundation by our <a href="https://www.hdmw.de/"
                     target="_top">trusted lawyer</a> Rechtsanwalt Moritz
@@ -895,6 +1011,12 @@
         </div>
      
     </section> </div>  
-    <section class="page-header"> </section>
+    <section class="page-header">
+	 <a href="http://hopeisback.com/"
+        target="_blank" title="We are the #HopeIsBack #Foundations #Network Our #task is to #Stop #Normalized #Corruption We #build new #economy in a #colorful and #liquid #decentralized #way #Contact us to #participate http://hopeisback.com/  We look for #management #conceptor #fundraiser #projectmanager">
+        <img src="index_files/hopeisbackNetWork.png" alt="HopeISBack NetWork" title="Hope Is Back The HopeIsBack Foundations Network" class="responsive">
+     </a> 
+   	
+     </section>
   </body>
 </html>
