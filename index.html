@@ -19,15 +19,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="index.css">
-    <base href="http://hopeisback.com/">
-    <script>		//<base href="http://hopeisback.com/"> 
+    <base href="http://hopeisback.com/">	
+    <script>	////<base href="http://hopeisback.com/"> 
 	function diveto(){let u=document.URL,l=u.length-1;if(u[l]==='?'){//?id? is expected!
 		let q=u.indexOf('?')+1;if(q)return u.substr(q,l-q);}//,p=u.indexOf('?')//u.indexOf('#');//?id?  l+ (u[u.length - 1] === '?')+
 		return null;}//u.length	//    function xdiveto(){let u=document.URL,p=u.indexOf('?');		if(p===-1) return null;return u.substr(p+1);}	
     function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)	 
 						a.childNodes[1].setAttribute("checked","checked");}
     function relocateit(b,at=0){//console.log("relocateit");
-		b.scrollIntoView(true);
+		//b.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+		b.scrollIntoView(false);//https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
 		b.style.borderColor ='purple';
 		b.style.borderStyle = 'double none';
 		divein(b);	}		
@@ -871,15 +872,15 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
                       <li>&nbsp;<a href="https://github.com/comcomist/iiaom">iiaom</a>
                         or hashed iiaom used as the identity in federal services
                         (with rss bridge) providing <a href="https://omemo.top/">xmpp/ommemo</a>
-                        or <a href="%20https://matrix.org/docs/spec/">matrix</a>,</li>
+                        or <a href="https://matrix.org/docs/spec/">matrix</a>,</li>
                       <ul>
                         <li>where the members' details, such as mac and ip
                           addresses, are only stored hashed while allowing
                           anonymization with vpn service bridging also the
-                          <a href="torproject.org"> tor</a> usage from the
+                          <a href="https://torproject.org"> tor</a> usage from the
                           qdolphin browser for accessing also main stream
-                          platforms such as google and facebook also from
-                          different devices and locations on the glob. </li>
+                          platforms such as google and facebook also
+                          from different devices and locations on the glob. </li>
                       </ul>
                     </ul>
                   </ul>
