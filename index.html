@@ -26,11 +26,17 @@
 		//<base href="http://hopeisback.com/"> 
 //     <base href="/var/sid-root/a/github/processing/hopeisback/index.html/">
 	//href="index.html?core?"
-	function diveto(){let u=document.URL,l=u.length-1;
+	function diveto(){let u=document.URL,l=u.length-1;// why chrom is not updating document.URL when is  not opened in new tab
+		// console.log(window.location, location.search);
 		if(u[l]==='?'){//?id? is expected!
+		 //let a=location.search;
+		 //return a.substr(1,a.length01);
+		 
+		// console.log(location.search);
 			//let q=u.lastIndexOf('?')+1;//
 								           //let q=u.indexOf('?')+1;
 					           let q=u.indexOf('?')+1;//		           let q=u.indexOf('?')+1;
+					          // console.log("q="+q);
 		           if(q)return u.substr(q,l-q);}//,p=u.indexOf('?')//u.indexOf('#');//?id?  l+ (u[u.length - 1] === '?')+
 		return null;}//u.length	//    function xdiveto(){let u=document.URL,p=u.indexOf('?');		if(p===-1) return null;return u.substr(p+1);}	
     function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)	 
