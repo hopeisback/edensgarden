@@ -27,8 +27,8 @@
     function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)	 
 						a.childNodes[1].setAttribute("checked","checked");}
     function relocateit(b,at=0){//console.log("relocateit");
-		//b.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-		b.scrollIntoView(false);//https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+		b.scrollIntoView({  inline:  "end"});
+		//b.scrollIntoView(true);//https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
 		b.style.borderColor ='purple';
 		b.style.borderStyle = 'double none';
 		divein(b);	}		
