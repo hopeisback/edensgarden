@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+	<meta http-equiv="cache-control" content="max-age=0"/>
+	<meta http-equiv="cache-control" content="no-store"/>
+	<meta http-equiv="cache-control" content="no-cache"/>
+	<meta http-equiv="cache-control" content="no-transform"/>
+	<meta http-equiv="expires" content="0"/>
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>HopeIsBack Foundations Network Preventing Corruption in big Colorful
-      Decentralized and Liquid Organizations</title>
+    <title>HopeIsBack Foundations Network Preventing Corruption in big Colorful Decentralized and Liquid Organizations</title>
     <meta name="description" content="For supplying our needs while preventing corruption, we create colorful decentralized and liquid self organized organizations arising in our global HopeIsBack Foundations Network, where each foundation may contribute only to humanitarian solutions based on the beneficial movement of people between groups in which they have equal power.">
     <meta name="robots" content="index, follow">
     <meta name="abstract" content="Preventing corruption in organizations contributing only to beneficial movement of people between groups in which they have equal power">
@@ -19,56 +24,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="index.css">
-   <base target=_top> 
-
-    <script>// /index_files/ //<base href="/var/sid-root/a/github/processing/hopeisback/"> 	
-		// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-		//<base href="http://hopeisback.com/"> 
-//     <base href="/var/sid-root/a/github/processing/hopeisback/index.html/">
-	//href="index.html?core?"
-	function diveto(){let u=document.URL,l=u.length-1;// why chrom is not updating document.URL when is  not opened in new tab
-		// console.log(window.location, location.search);
-		if(u[l]==='?'){//?id? is expected!
-		 //let a=location.search;
-		 //return a.substr(1,a.length01);
-		 
-		// console.log(location.search);
-			//let q=u.lastIndexOf('?')+1;//
-								           //let q=u.indexOf('?')+1;
-					           let q=u.indexOf('?')+1;//		           let q=u.indexOf('?')+1;
-					          // console.log("q="+q);
-		           if(q)return u.substr(q,l-q);}//,p=u.indexOf('?')//u.indexOf('#');//?id?  l+ (u[u.length - 1] === '?')+
-		return null;}//u.length	//    function xdiveto(){let u=document.URL,p=u.indexOf('?');		if(p===-1) return null;return u.substr(p+1);}	
+    <script>
+	function diveto(){let a=location.hash,al=a.length;
+						if(al)return a.substr(1,al-1);return null;}
+	function relocate(){let s=diveto();
+						if(s)relocateit(document.getElementById(s));}	
     function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)	 
 						a.childNodes[1].setAttribute("checked","checked");}
-    function relocateit(b,at=0){//console.log("relocateit");
-		b.scrollIntoView({  inline:  "end"});
-		//b.scrollIntoView(true);//https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
-		b.style.borderColor ='purple';
-		b.style.borderStyle = 'double none';
-		divein(b);	}		
-    function relocate(){let s=diveto();if(s)relocateit(document.getElementById(s));}
-    function occurrencesOf(e,v){let r =[];
-		for(ontag= 0,l  = v.length,	el = e.length, i=0;i<el;){i=e.indexOf(v,i+l);
+	function relocateid(i){	location.hash=i;relocateit(document.getElementById(i));}								
+    function relocateit(b,at=0){b.scrollIntoView({inline:"end"});
+						b.style.borderColor='purple';b.style.borderStyle='double none';
+						divein(b);}		
+    function occurrencesOf(e,v){let r=[];
+		for(ontag=0,l=v.length,el=e.length,i=0;i<el;){i=e.indexOf(v,i+l);
 			   if(i===-1)break; 			// console.log("occurrencesOf  - r,i:",r,i);
 			   ontag=e.lastIndexOf('<',i);//		console.log(x,i);
 			   let tag1=e[ontag+1], tag3=e.substr([ontag+1],3);
-			   if(tag1!=='a'&&tag3!=="<di")
-			   //   &&tag3!=="<la" and why having 
+			   if(tag1!=='a'&&tag3!=="<di")   //   &&tag3!=="<la" and why having 
 			       r.push(i);}//// filling r with  found v  only if the tag is not of link	     
-					  return r;}	  // else console.log(i," was not pushed tag3=", tag3);			  //console.log("occurrencesOf  - r:",r);		
-	
-	function nunfold(n,oc={}){
-	relocateit(document.querySelectorAll(".content-inner")[n]);
-	if(oc.length){
-	// use 
-	let v=document.getElementById("searchItem").value;
-	 console.log(n,v);
-	window.find(v);
-		}
-	}
-
-function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-highlight/  Original JavaScript code by Chirp Internet: www.chirp.com.au // Please acknowledge use of this code by including this header.
+	    return r;}	  // else console.log(i," was not pushed tag3=", tag3);			  //console.log("occurrencesOf  - r:",r);
+	function removehtag(hiliteTag){let arr = document.getElementsByTagName(hiliteTag);// remove highlighting //console.log("removehtag ",arr);
+		while(arr.length && (el = arr[0])) {let parent = el.parentNode;
+					parent.replaceChild(el.firstChild, el);
+					parent.normalize();}};								
+	function unfold(n,oc={}){if(oc.length){	
+		let highlight = new Highlight(document.querySelectorAll(".content-inner")[n]); // id of the element to parse
+		highlight.apply(document.getElementById("searchItem").value);
+		} relocateit(document.querySelectorAll(".content-inner")[n]); } 
+	function resultb(n,r,i={},l=0){let bu = document.createElement("button");
+			bu.innerHTML= l.toString(); // r.toString()+here we should have number of results in the element
+		//	bu.onmouseover=marked;// on hover;
+			bu.type		="button";	
+//			bu.background-color ='purple';				
+			bu.addEventListener("click", function(){unfold(n,i);}, false);			
+			return bu;}
+				
+	function cleaning(alsov=true){let res=document.getElementById("searchresults");
+	  while(res.childNodes[0]) res.removeChild(res.childNodes[0]);
+	  document.getElementById("searchmsg").textContent='';
+	  if(alsov){
+		  console.log("alsov in cleaning ");
+		  removehtag( "MARK");//document.getElementById("searchItem").value||
+	  document.getElementById("searchItem").value='';
+  }
+	  return res;}
+	  		
+	function findit(a){if(a){//		 console.log("findit a", a);
+		let res=cleaning(false);
+	  let item = document.querySelectorAll(".content-inner"),//document.querySelec­torAll("content-inner");// getting the hidden element from the doby.
+		  maxn = item.length,  r = 0,	n = 0, t = 0;//console.log("maxn="+maxn);
+	  for(;n<maxn&&r<100;n++){let i=occurrencesOf(item[n].innerHTML,a);//		  let i=occurrencesOf(item[n].outerHTML,a);//item[n].outerHTML.indexOf(a);//item[n].innerHTML.indexOf(a);					
+		   if (i.length){res.appendChild(resultb(n,r++,i,i.length));
+				t+=i.length;}}
+		   document.getElementById("searchmsg").textContent=t.toString();
+		  return t;	 } 
+		  else cleaning(true);;
+		  }
+		  
+function Highlight(id, tag){////https://www.the-art-of-web.com/javascript/search-highlight/  Original JavaScript code by Chirp Internet: www.chirp.com.au // Please acknowledge use of this code by including this header.
   let targetNode = id;//document.getElementById(id) || document.body;
   let hiliteTag = tag || "MARK";
   let skipTags = new RegExp("^(?:" + hiliteTag + "|SCRIPT|FORM|SPAN)$");
@@ -133,54 +146,15 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
     if(input === undefined || !(input = input.replace(/(^\s+|\s+$)/g, ""))) return;    
     if(this.setRegex(input)) this.hiliteWords(targetNode);    
     return matchRegExp;};
+}// end of Highlight
+//let lv=a.length;//			   console.log(n +"startloop i="+i); //v=document.getElementById("searchItem").value,
+//  <body onfocus="relocate()">
+// <body onfocus="relocate(data-active-id)"> 
 
-}
-	
-	function removehtag(hiliteTag){let arr = document.getElementsByTagName(hiliteTag);// remove highlighting
-		 console.log("removehtag ",arr);
-    while(arr.length && (el = arr[0])) {let parent = el.parentNode;
-					parent.replaceChild(el.firstChild, el);
-					parent.normalize();    }  };
-					
-	function unfold(n,oc={}){if(oc.length){	
-		let myHilitor = new Hilitor(document.querySelectorAll(".content-inner")[n]); // id of the element to parse
-		myHilitor.apply(document.getElementById("searchItem").value);
-		} relocateit(document.querySelectorAll(".content-inner")[n]); }
-	 
-
-	function resultb(n,r,i={},l=0){let bu = document.createElement("button");
-			bu.innerHTML= l.toString(); // r.toString()+here we should have number of results in the element
-		//	bu.onmouseover=marked;// on hover;
-			bu.type		="button";	
-//			bu.background-color ='purple';				
-			bu.addEventListener("click", function(){unfold(n,i);}, false);			
-			return bu;}
-				
-	function cleaning(alsov=true){let res=document.getElementById("searchresults");
-	  while(res.childNodes[0]) res.removeChild(res.childNodes[0]);
-	  document.getElementById("searchmsg").textContent='';
-	  if(alsov){
-		  console.log("alsov in cleaning ");
-		  removehtag( "MARK");//document.getElementById("searchItem").value||
-	  document.getElementById("searchItem").value='';
-  }
-	  return res;}
-	  		
-	function findit(a){if(a){//		 console.log("findit a", a);
-		let res=cleaning(false);
-	  let item = document.querySelectorAll(".content-inner"),//document.querySelec­torAll("content-inner");// getting the hidden element from the doby.
-		  maxn = item.length,  r = 0,	n = 0, t = 0;//console.log("maxn="+maxn);
-	  for(;n<maxn&&r<100;n++){let i=occurrencesOf(item[n].innerHTML,a);//		  let i=occurrencesOf(item[n].outerHTML,a);//item[n].outerHTML.indexOf(a);//item[n].innerHTML.indexOf(a);					
-		   if (i.length){res.appendChild(resultb(n,r++,i,i.length));
-				t+=i.length;}}
-		   document.getElementById("searchmsg").textContent=t.toString();
-		  return t;	 } 
-		  else cleaning(true);;
-		  }//let lv=a.length;//			   console.log(n +"startloop i="+i); //v=document.getElementById("searchItem").value,
-					  	
+ //<body >					  	
     </script>
   </head>
-  <body onfocus="relocate()">
+   <body onfocus="relocate()">
     <!--
 	  <div class="content-inner entry-content"> <section class="main-content">        <h2 id="hopeisback-network-foundations2" style="text-align: center;">The            Platform of the HopeIsBack Foundations Network</h2>      </<section> </div>      -->
     <section class="page-header">
@@ -198,7 +172,7 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
       <!--
       <div class="dropdown"> <button class="dropbtn">Translators <i class="fa fa-caret-down"></i>        </button>        <div class="dropdown-content"> <a href="https://www.deepl.com/translator"            target="_blank">deepl</a> <a href="https://translate.google.com/translate?hl=&amp;sl=auto&amp;tl=en&amp;u=http%3A%2F%2Fhopeisback.com%2F"            target="_blank">google</a> <a href="https://www.prekladac.cz/" target="_blank">prekladac</a>        </div>      </div>       -->
     </section>
-    <div align="center"> <a href="?registering?"> <img src="index_files/start.png"
+    <div align="center"> <a href="javascript:void(0);" onclick="relocateid('registering');return false;"> <img src="index_files/start.png"
           alt="Start by Contact" title="Start by Contact" border="0" width="42"
           height="42"></a> <a href="https://t.me/s/hopeisback"> <img src="index_files/telegram.png"
           alt="Our channel on telegram" title="Our channel on telegram" border="0"
@@ -220,14 +194,14 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
           <h2 id="hopeisback-network-foundations" style="text-align: center;">The
             Platform of the HopeIsBack Foundations Network</h2>
           <h3 style="text-align: center;">Our network pave the way, we, the
-            many, can by ourselves defeat the controlling few (- <a href="?winnerproblem?">the
-              lunatic</a> elites) and we are starting in our <a href="?core?">degentrification
+            many, can by ourselves defeat the controlling few (- <a href="javascript:void(0);" onclick="relocateid('winnerproblem');return false;">the
+              lunatic</a> elites) and we are starting in our <a href="javascript:void(0);" onclick="relocateid('core');return false;">degentrification
               and comcomized real-estate</a>. This hopeisback platform is made
             by and for the brave ones who know their difficulties, lost their
-            hope, but are able to gain it back. We are <a href="?comcomized?">comcomizing</a>
+            hope, but are able to gain it back. We are <a href="javascript:void(0);" onclick="relocateid('comcomized');return false;">comcomizing</a>
             this platform in front of the global corporate giants while
             targeting both groups: the small business (good for economy) and
-            their customers (good for citizens) in any state. Join us <a href="?registering?">here.</a>&nbsp;
+            their customers (good for citizens) in any state. Join us <a href="javascript:void(0);" onclick="relocateid('registering');return false;">here.</a>&nbsp;
             </h3> </div>
         <div class="flding" id="analysis"> <input id="ianalysis" class="toggle"
             type="checkbox"> <label for="ianalysis" class="lbl-toggle"> <img src="index_files/analysis.png"
@@ -293,19 +267,19 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
                         blocking people - <i>a global problematic phenomenos
                           producing higher passivity or aggression and more wars</i>.
                       </center>
-                      <p>We, the <a href="?statute?">HopeIsback NetWork</a>,
+                      <p>We, the <a href="javascript:void(0);" onclick="relocateid('statute');return false;">HopeIsback NetWork</a>,
                         which are the self organized economic structuring aspect
                         of the <a href="https://www.google.com/search?q=hopeisback"
                           target="_blank">#HopeIsBack</a>, are now in the
                         opening phase of <a href="https://en.wikipedia.org/wiki/Foundation_%28nonprofit%29"
                           target="_blank">localizing</a> HopeIsBack foundations,
-                        <a href="?registering?">connecting and looking for </a>
+                        <a href="javascript:void(0);" onclick="relocateid('registering');return false;">connecting and looking for </a>
                         lawyers to register and support and for foundation
                         managers, who can show their abilities and their social
                         ambitions.</p>
                       <ul>
-                        <li> We are now building, and you could <a href="?registering?">apply</a>
-                          to join us by signing with us the <a href="?comcomized?">comcomized</a>
+                        <li> We are now building, and you could <a href="javascript:void(0);" onclick="relocateid('registering');return false;">apply</a>
+                          to join us by signing with us the <a href="javascript:void(0);" onclick="relocateid('comcomized');return false;">comcomized</a>
                           agreement, the i.comcomized.com to provide the
                           atomization of transparency and authentication of the
                           interactions and statements in comcom and liquid union
@@ -520,7 +494,7 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
                                         is to be&nbsp;independently decided in <span
                                           class="st">qualified majority</span>
                                         by the peers.</li>
-                                      <center><a href="?comcomizedmore?">more
+                                      <center><a href="javascript:void(0);" onclick="relocateid('comcomizedmore">more
                                           about this..</a></center>
                                     </ul>
                                   </li>
@@ -624,7 +598,7 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
                                   selves up in a fair, participative and
                                   dynamic, but less representative and non
                                   hierarchical, model of organization.</em></p>
-                              <center><a href="?aboutlu?">more about this..</a></center>
+                              <center><a href="javascript:void(0);" onclick="relocateid('aboutlu');return false;">more about this..</a></center>
                             </div>
                           </div>
                         </div>
@@ -751,7 +725,7 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
                             </div>
                           </div>
                         </div>
-                        <a href="?Hagpl?" target="_top"></a></li>
+                        <a href="javascript:void(0);" onclick="relocateid('Hagpl');return false;" target="_top"></a></li>
                       <li>
                         <div class="flding"> <input id="iiiaom" class="toggle"
                             type="checkbox"> <label for="iiiaom" class="lbl-toggle"><a
@@ -766,7 +740,7 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
                             </div>
                           </div>
                         </div>
-                        <a href="?iiaom?" target="_top"></a></li>
+                        <a href="javascript:void(0);" onclick="relocateid('iiaom');return false;" target="_top"></a></li>
                     </ul>
                   </li>
                   <li>
@@ -968,7 +942,7 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
                   <div class="flding" id="comcomizedabout"> <input id="icomcomizedabout"
                       class="toggle" type="checkbox"> <label for="icomcomizedabout"
                       class="lbl-toggle">Learn more about ComComized agreements</label>
-                    <div class="fcontent content-inner"> The <a href="?comcomized?"
+                    <div class="fcontent content-inner"> The <a href="javascript:void(0);" onclick="relocateid('comcomized');return false;"
                         target="_top">comcomized agreement</a> of equal
                       ownership is made to avoid been taken over by the huge
                       corporations, while giving a room for cooperating with
@@ -984,7 +958,7 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
                           by making any bailout<strong>-</strong>privatization-cycle
                           together with the citiznes involved as comcom players
                           instead of only some few huge companies</li>
-                        <li>our <a href="?core?">core of development</a>
+                        <li>our <a href="javascript:void(0);" onclick="relocateid('core');return false;">core of development</a>
                           including the&nbsp; real estate comcom and granting
                           concom granting grantees/insurance to its members</li>
                       </ul>
@@ -993,7 +967,7 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
                   <div class="flding" id="aboutlu"> <input id="iaboutlu" class="toggle"
                       type="checkbox"> <label for="iaboutlu" class="lbl-toggle">Learn
                       more about liquid unions.. </label>
-                    <div class="fcontent content-inner"> the <a href="?liquidunion?"
+                    <div class="fcontent content-inner"> the <a href="javascript:void(0);" onclick="relocateid('liquidunion');return false;"
                         target="_top">Liquid union model</a> of fair
                       distribution (compared with liquid/delegative- democracy
                       telling how to decide and produce or serve, liquid union
@@ -1032,7 +1006,7 @@ function Hilitor(id, tag){////https://www.the-art-of-web.com/javascript/search-h
               border="0" width="42" height="42"> <b>Your ways</b> to join us:</label>
           <div class="fcontent content-inner">
             <center>
-              <p>Contact us for <a href="?recruting?" title="recruting">recruiting</a>
+              <p>Contact us for <a href="javascript:void(0);" onclick="relocateid('recruting');return false;" title="recruting">recruiting</a>
                 or by <a href="https://twitter.com/search?q=%23art4hopeisback">#art4HopeIsBack</a>,
                 we can even help in forming your<i> foundation by our <a href="https://www.hdmw.de/"
                     target="_top">trusted lawyer</a> Rechtsanwalt Moritz
