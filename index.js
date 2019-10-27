@@ -1,3 +1,11 @@
+	// src="nicEdit-latest.js" 
+//bkLib.onDomLoaded(nicEditors.allTextAreas);
+
+	function swtichTo(my,n){	  my.style.display="none";
+		
+		let i=document.getElementById(n);//my.parentElement.childern[n];
+		i.style.display="block";
+		}
 	function diveto(){let a=location.hash,al=a.length;
 						if(al)return a.substr(1,al-1);return null;}
 	function relocate(){let s=diveto();
