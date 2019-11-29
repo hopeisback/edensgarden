@@ -1,5 +1,109 @@
-	// src="nicEdit-latest.js" 
-//bkLib.onDomLoaded(nicEditors.allTextAreas);
+// under humanitarian agpl license:  You are not allowed to use, produce from or design from this or its part, anything contained with the aim to kill, to torture, or without their consent, to cause harm to or to monitor people and any permission beside this restriction is granted here only under the Agpl License! https://hopeisback.com/#hagpl
+function contentApply(container,txt){
+	let	bein = container.children[0].checked,
+		bebefore = container.children[1].checked;
+	if( !bein&&!bebefore)return "";
+	let	location = container.children[2].value,
+		name = container.children[4].value,
+		title = container.children[6].value,	
+		icon = container.children[8].value,
+		img = container.children[9].value,
+		toinsert = '<div class="flding" id="' 
+			+name+'"> <input id="i'
+			+name+'" class="toggle" type="checkbox"> <label for="i'
+			+name+'"class="lbl-toggle">'
+			+title+' </label><div class="fcontent" "content-inner">please replace  your content with this one.</div></div>',
+		cutAt = txt.indexOf('<div class="flding" id="'+location);
+	console.log(
+	"children",container.children ,
+	"location : ",container.children[2].value,
+	"name : ",container.children[4].value,
+	"title : ",container.children[6].value,	
+		"icon : ",container.children[8].value,
+			"img : ",container.children[9].value,
+	"toinsert:",toinsert,
+	 "cutat",cutAt,
+	 "txt.slice(0,cutAt)",txt.slice(0,cutAt),
+	 "txt.slice(cutAt,txt.length)",txt.slice(cutAt,txt.length),
+	 " txt= ",txt);
+	
+	if (cutAt===-1) return "";
+	if(bebefore)	return txt.slice(0,cutAt)+toinsert+txt.slice(cutAt,txt.length);
+	let endit='"content-inner"';
+	cutAt = txt.slice(cutAt,txt.length).indexOf(endit)+endit.length;	
+	return txt.slice(0,cutAt)+toinsert+txt.slice(cutAt,txt.length);}
+
+function restructdo (container,steps) {
+	let c = document.getElementById(container),p=document.getElementById(steps);
+	if(p.value ===0){c.value=[1,loadfile(),""];p.value=1;} // [step,filename, filecontent]
+	else switch(c.value[0]){
+		case 1:	c.value=[2,c.value[1].files[0],""];
+			window.open(c.value[1].name);//,"bemodified", "menubar=no,location=no,resizable=yes,scrollbars=yes,status=yes").document.innerHTML;
+			c.style.display="block";
+			c.innerHTML+="In ";        
+			addfield(c,"radio","locatingit") ;//container.children[0]
+			c.innerHTML+="or Before :";
+			addfield(c,"radio","locatingit","checked");//container.children[1] 
+		    addfield(c,"text","lname","br","The locating name");//container.children[2]	
+		    addfield(c,"text","fname","br","The name of this element");//container.children[4]
+		    addfield(c,"text","tname","br","The title of this element");//container.children[6]
+		    c.innerHTML  +="Its Icon: ";
+		    addfield(c,"file","icnname").accept="image/png, image/jpeg";//container.children[8]
+		    c.innerHTML  +="Its Image: ";
+		    addfield(c,"file","imgname","br").accept="image/png, image/jpeg";//container.children[9]		  
+			let reader = new FileReader();
+			reader.onload = function () {		
+				c.value=[2,c.value[1],reader.result];
+		 	 p.value=2;//		 	 
+		 	    }
+			reader.readAsBinaryString(c.value[1]);
+    break;
+		case 2: c.value[2]=contentApply(c,c.value[2]);	
+				if(c.value[2]){p.value=3;
+				saveas(c.value[1].name,c.value[2]);
+		   //todo here after save window.open(c.value[1].name).. 
+		  //p.value=0;//		   
+				}else {while (c.firstChild) c.removeChild(c.firstChild);
+					   p.value=0;}
+				c.value[0]=0;
+    break;
+		}}/*  * usage eg:
+ <div id="create-item" ></div>
+    <a href="javascript:void(0);" 
+         onclick="restructdo('create-item','create-item-progress');">       
+	   <progress value="0" max="3" id="create-item-progress">
+	</progress></a> 
+ **/
+	
+
+function addfield(container,type,name,sofix,placeholder){           
+          let i = document.createElement("input");// Create an <input> element, set its type and name attributes
+          i.type = type;
+          i.name = name;
+          if(placeholder)i.placeholder=placeholder;
+          container.appendChild(i);
+          if(sofix)if(sofix ==="checked")
+				  i.outerHTML=i.outerHTML.slice(0,i.outerHTML.length-1)+"checked>";//default is checked by replace '>' with "checked>"
+			 else container.appendChild(document.createElement(sofix));// Append a line break 
+     return i ;} 	
+
+function saveas(filename, text) {let a = document.createElement('a');
+    a.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    a.setAttribute('download', filename);
+    if (document.createEvent){let event = document.createEvent('MouseEvents');
+          event.initEvent('click', true, true);  
+          a.dispatchEvent(event);
+  }  else a.click();}
+     
+     
+function loadfile(){
+	let i = document.createElement("input");// Create an input element          // this function must be called from  a user    ,,,https://stackoverflow.com/questions/6463439/how-to-open-a-file-browse-dialog-using-javascript
+    i.type   = "file";						// Set its type to file
+    i.accept = ".html";    					// Set accept to the file types you want the user to select.   Include both the file extension and the mime type
+    i.id     = "loadFile";                  // set it id  
+    i.dispatchEvent(new MouseEvent("click"));// dispatch a click event to open the file dialog
+	return i;}//  i.addEventListener("change", beforeload(i));// set onchange event to call callback when user has selected file
+
 
 	function swtichTo(my,n){	  my.style.display="none";
 		
@@ -133,3 +237,5 @@ function Highlight(id, tag){////https://www.the-art-of-web.com/javascript/search
 // <body onfocus="relocate(data-active-id)"> 
 
  //<body >					  	
+	// src="nicEdit-latest.js" 
+    // bkLib.onDomLoaded(nicEditors.allTextAreas);
