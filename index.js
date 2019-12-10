@@ -26,14 +26,23 @@ function contentApply(container,txt){
 	 "txt.slice(0,cutAt)",txt.slice(0,cutAt),
 	 "txt.slice(cutAt,txt.length)",txt.slice(cutAt,txt.length),
 	 " txt= ",txt);
-	
+	//todo 
 	if (cutAt===-1) return "";
+	
+	let inmenu=txt.indexOf('<div class="dropdown-content">'),
+	    endmenu=txt.indexOf('</div>',inmenu);
+	if (inmenu!==-1){
+		let into=txt.indexOf(location,inmenu);
+		//also insert if inmenu exist in <div class="dropdown-content">
+	}
+	//complete image and icon
+	    
 	if(bebefore)	return txt.slice(0,cutAt)+toinsert+txt.slice(cutAt,txt.length);
 	let endit='"content-inner"';
 	cutAt = txt.slice(cutAt,txt.length).indexOf(endit)+endit.length;	
 	return txt.slice(0,cutAt)+toinsert+txt.slice(cutAt,txt.length);}
 
-function restructdo (container,steps) {
+function restruct (container,steps) {
 	let c = document.getElementById(container),p=document.getElementById(steps);
 	if(p.value ===0){c.value=[1,loadfile(),""];p.value=1;} // [step,filename, filecontent]
 	else switch(c.value[0]){
@@ -66,11 +75,11 @@ function restructdo (container,steps) {
 				}else {while (c.firstChild) c.removeChild(c.firstChild);
 					   p.value=0;}
 				c.value[0]=0;
-    break;
+    break;// todo insert contenteditable="true" into <body > to edit then after save undo it 
 		}}/*  * usage eg:
  <div id="create-item" ></div>
     <a href="javascript:void(0);" 
-         onclick="restructdo('create-item','create-item-progress');">       
+         onclick="restruct('create-item','create-item-progress');">       
 	   <progress value="0" max="3" id="create-item-progress">
 	</progress></a> 
  **/
