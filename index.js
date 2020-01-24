@@ -119,16 +119,74 @@ function loadfile(){
 		let i=document.getElementById(n);//my.parentElement.childern[n];
 		i.style.display="block";
 		}
-	function diveto(){let a=location.hash,al=a.length;
-						if(al)return a.substr(1,al-1);return null;}
-	function relocate(){let s=diveto();
-						if(s)relocateit(document.getElementById(s));}	
-    function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)	 
-						a.childNodes[1].setAttribute("checked","checked");}
-	function relocateid(i){	location.hash=i;relocateit(document.getElementById(i));}								
-    function relocateit(b,at=0){b.scrollIntoView({inline:"end"});
+//	function diveto(){let a=location.hash,al=a.length;if(al)return a.substr(1,al-1);return null;}//	location is	window.location,
+//function diveto(){let a=location.hash,al=a.length;						if(al)return a.substr(1,al-1);return null;}						
+/////////
+function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)// upward	 
+				        {let b=a.childNodes[1]; 
+							//if(b.className="toggle")b.reload();//&& b.type="checkbox"
+							
+							//if(b.className="toggle" )
+								b.setAttribute("checked","checked");} }		
+function focuson(b,at=0){if(b!==null){
+						b.scrollIntoView({inline:"end"});
 						b.style.borderColor='purple';b.style.borderStyle='double none';
-						divein(b);}		
+						return(b);}}
+function goto(b){divein(focuson(b));}//replace 	href="#id" with href="javascript:void(0);"onclick="go2('id');"
+
+function recrelocate(a,al){while(al){let b  = a.lastIndexOf("#");
+   		   divein(document.getElementById(a.substr(b+1,al-1)));
+   		   if(b)al -= b; else 
+   		     {al  = 0;
+				// location.reload() ;
+   		   }
+   		   }	}
+
+function relocate1(a=location.hash){let al=a.length;if(al)
+					goto(document.getElementById(a.substr(1,al-1)));}//  relocate is trigged by url when <body onfocus="relocate()"> and <a   href="#idname"   target="_blank">, 
+
+//relocateid=>go2
+function go2(i){location.hash=i;relocate();
+	window.reload() ;
+	return true///	false
+	;}
+
+
+function relocateid(i){location.hash=i;relocate();return false;}// relocateid is in the same page trigged only by <a href="javascript:void(0);"  onclick="relocateid('idname');return false;"> //No browser loading new or  refreshing the same page. JavaScript void is often used when, inserting an expression into a web page may produce an unwanted side-effect. By using JavaScript:Void(0), you can eliminate the unwanted side-effect, because it will return the undefined primative value. More see https://www.quackit.com/javascript/tutorial/javascript_void_0.cfm
+/////////goto(document.getElementById(i));
+							
+function relocate(a=location.hash){
+	if(!a) return;
+	let al=a.length,f=a.lastIndexOf("+");//test with #comcomizedabout+greencomcom
+	// alert("no a")
+//console.log("a"a);
+ if(f===-1) recrelocate(a,al);
+ else{ 
+	 
+	let b=	 focuson(document.getElementById(a.substr(f+1,al-1)));     
+	 //console.log(f); 
+	 recrelocate(a,f);
+	
+
+window.location.href = window.location.href;
+	// browser.tabs.reload({bypassCache: true});
+//	 location.reload(true); 
+	 
+	 //browser.runtime.reload();
+     
+     //browser.tabs.reload();
+     //location.reload() ;   
+     //b.focus();
+            }
+            //location.reload() ;
+       //browser.runtime.reload();     
+          //browser.tabs.reload();
+            }  			      
+   			      
+    
+	
+	
+								
     function occurrencesOf(e,v){let r=[];
 		for(ontag=0,l=v.length,el=e.length,i=0;i<el;){i=e.indexOf(v,i+l);
 			   if(i===-1)break; 			// console.log("occurrencesOf  - r,i:",r,i);
@@ -144,7 +202,7 @@ function loadfile(){
 	function unfold(n,oc={}){if(oc.length){	
 		let highlight = new Highlight(document.querySelectorAll(".content-inner")[n]); // id of the element to parse
 		highlight.apply(document.getElementById("searchItem").value);
-		} relocateit(document.querySelectorAll(".content-inner")[n]); } 
+		} goto(document.querySelectorAll(".content-inner")[n]);  } 
 	function resultb(n,r,i={},l=0){let bu = document.createElement("button");
 			bu.innerHTML= l.toString(); // r.toString()+here we should have number of results in the element
 		//	bu.onmouseover=marked;// on hover;
