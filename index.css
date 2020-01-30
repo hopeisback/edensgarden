@@ -14,15 +14,14 @@
 .button {  background-color: #4CAF50;} 
 orangered
 button {  background-color: purple;} 
-*/
-
-
-
+input[type='text']  { width: 50%;}
+* */
+input[type='text']  { width: 50%;}
 input[type='checkbox']  { display: none;}
 .fcontent   { max-height: 0px;  overflow: hidden;  transition: max-height .25s ease-in-out;}
 .fcontent .content-inner{border-bottom: 1px solid rgba(0,255,0,0.3);}
 .toggle:checked + .lbl-toggle + .fcontent {max-height: none;}
-.flding      			{ margin-bottom: 1rem 0;}
+.flding      			{ margin: 1rem 0;}
 .toggle:checked + .lbl-toggle::before {  transform: rotate(90deg) translateX(-3px);}
 .toggle:checked + .lbl-toggle {  border-bottom-right-radius: 0;  border-bottom-left-radius: 0;}
 
@@ -65,7 +64,7 @@ a:link {
   text-decoration: none;
 }
 a:visited {
-  color: ornage;
+  color: orangered;
   background-color: transparent;
   text-decoration: none;
 }
@@ -79,7 +78,7 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
-&amp;lt;!--  nav --&amp;gt;
+
 .topnav {
   overflow: hidden;
   background-color:  #4CAF50;
@@ -250,15 +249,15 @@ a:active {
 }
 
 @media all and (min-width : 992px) {
-    .nav-bar &amp;gt; .nav-bar__label {
+    .nav-bar .nav-bar__label {
         display: none;
     }
 
-    .nav-bar &amp;gt; .nav-bar__list {
+    .nav-bar  .nav-bar__list {
         display: block;
     }
 
-    .nav-bar &amp;gt; .nav-bar__list &amp;gt; .nav-bar__list-item {
+    .nav-bar  .nav-bar__list  .nav-bar__list-item {
         display: inline-block;
         position: relative;
     }
@@ -275,11 +274,12 @@ a:active {
 
 /*style.css ! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
-@import url("Open-Sans-400-700.css");
+/*@import url("Open-Sans-400-700.css");*/
+
 html {
 	font-family: sans-serif;
 	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%
+/*	-webkit-text-size-adjust: 100%;*/
 }
 body {  
 	margin: 0
@@ -877,7 +877,7 @@ https://www.w3schools.com/css/css3_gradients.asp
 	border: solid 1px #dce6f0;
 	border-radius: 0.3rem
 }
-.main-content pre&amp;gt;code {
+.main-content pre code {
 	padding: 0;
 	margin: 0;
 	font-size: 0.9rem;
@@ -931,10 +931,10 @@ https://www.w3schools.com/css/css3_gradients.asp
 	color: #819198;
 	border-left: 0.3rem solid #dce6f0
 }
-.main-content blockquote&amp;gt;:first-child {
+.main-content blockquote:first-child {
 	margin-top: 0
 }
-.main-content blockquote&amp;gt;:last-child {
+.main-content blockquote:last-child {
 	margin-bottom: 0
 }
 .main-content table {
