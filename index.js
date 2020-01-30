@@ -127,8 +127,8 @@ function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)// upwa
 							//if(b.className="toggle")b.reload();//&& b.type="checkbox"
 							
 							//if(b.className="toggle" )
-							//	b.setAttribute("checked","checked");
-								b.['checked'] = "checked";
+								b.setAttribute("checked","checked");
+								//b.['checked'] = "checked";
 								} }		
 function focuson(b,at=0){if(b!==null){
 						b.scrollIntoView({inline:"end"});
