@@ -127,8 +127,19 @@ function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)// upwa
 							//if(b.className="toggle")b.reload();//&& b.type="checkbox"
 							
 							//if(b.className="toggle" )
-								b.setAttribute("checked","checked");
-								//b.['checked'] = "checked";
+								// firefox or chrom do not agree how to set value???
+								
+								//b.setAttribute("checked","checked");//firefox
+								b.checked = true;
+								//b.checked = "checked";
+								
+								/*
+								 index.js:130 Uncaught TypeError: b.setAttribute is not a function
+    at divein (index.js:130)
+    at recrelocate (index.js:140)
+    at relocate (index.js:165)
+    at onfocus (VM13 :51)
+								 * */
 								} }		
 function focuson(b,at=0){if(b!==null){
 						b.scrollIntoView({inline:"end"});
