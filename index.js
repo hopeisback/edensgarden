@@ -122,10 +122,59 @@ function loadfile(){
 //	function diveto(){let a=location.hash,al=a.length;if(al)return a.substr(1,al-1);return null;}//	location is	window.location,
 //function diveto(){let a=location.hash,al=a.length;						if(al)return a.substr(1,al-1);return null;}						
 /////////
-function divein(a){if(a!==null)
+function divein(a){
+	//if(a!==null)
+	//if(a.tagName!=='BODY'&&a.className==='flding')
+	//a.childNodes[1].click();
+
   for(;a.tagName!=='BODY';a=a.parentElement)if(a.className==='flding')
-	       { //console.log(a.tagName)
-			 a.childNodes[1].checked = true;}}
+	       { //console.log(a.childNodes)
+			   let b=a.childNodes[1];
+			   //b.checked = true;
+			   b.checked = !b.checked;
+			   }
+			   
+} /*	 
+  *
+  https://jsfiddle.net/fjaeger/L9z9t04p/4/ 
+  function toggleA() {
+    var elm = document.getElementById('check-a');
+    elm.checked = !elm.checked;
+}
+
+function toggleB() {
+    var elm = document.getElementById('check-b');
+    elm.click();
+}
+
+function toggleJQ() {
+    var elm = $('#check-jq');
+    elm.prop('checked', !elm.prop('checked'));
+    // Use .click() instead
+}
+
+function setC(checked) {
+    var elm = document.getElementById('check-c');
+    if (checked != elm.checked) {
+        elm.click();
+    }
+}
+  * */
+			//if (checked != b.checked)
+   //b.click();//
+   	//		   b.dispatchEvent(new Event('change')); 
+			    //if (checked != b.checked)     b.click();
+  //https://stackoverflow.com/questions/8206565/check-uncheck-checkbox-with-javascript-jquery-or-vanilla
+  //https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click
+	/*The HTMLElement.click() method simulates a mouse click on an element.
+
+When click() is used with supported elements (such as an <input>), it fires the element's click event. This event then bubbles up to elements higher in the document tree (or event chain) and fires their click events.*/		   
+	//		   b.click();
+			   //b.checked = true;
+			  // b.setAttribute("checked","checked");
+			 //a.childNodes[1].checked = true;
+			 
+			 
 			 //for(;;a=a.parentElement)
 	   //  for(;a.tagName!=='body';a=a.parentElement)// upward	 
 				   //     {let b=a.childNodes[1]; b.checked = true;} }
