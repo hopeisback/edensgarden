@@ -122,15 +122,25 @@ function loadfile(){
 //	function diveto(){let a=location.hash,al=a.length;if(al)return a.substr(1,al-1);return null;}//	location is	window.location,
 //function diveto(){let a=location.hash,al=a.length;						if(al)return a.substr(1,al-1);return null;}						
 /////////
-function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)// upward	 
-				        {let b=a.childNodes[1]; 
+function divein(a){if(a!==null)
+  for(;a.tagName!=='BODY';a=a.parentElement)if(a.className==='flding')
+	       { //console.log(a.tagName)
+			 a.childNodes[1].checked = true;}}
+			 //for(;;a=a.parentElement)
+	   //  for(;a.tagName!=='body';a=a.parentElement)// upward	 
+				   //     {let b=a.childNodes[1]; b.checked = true;} }
+
+function Xdivein(a){if(a!==null)
+	//for(;a.name!=='body';a=a.parentElement)
+	     for(;a.tagName!=='body';a=a.parentElement)// upward	 
+				        {let b=a.childNodes[1]; b.checked = true;} }
 							//if(b.className="toggle")b.reload();//&& b.type="checkbox"
 							
 							//if(b.className="toggle" )
 								// firefox or chrom do not agree how to set value???
 								
 								//b.setAttribute("checked","checked");//firefox
-								b.checked = true;
+								//b.checked = true;
 								//b.checked = "checked";
 								
 								/*
@@ -140,7 +150,7 @@ function divein(a){if(a!==null)for(;a.tagName!=='body';a=a.parentElement)// upwa
     at relocate (index.js:165)
     at onfocus (VM13 :51)
 								 * */
-								} }		
+								//} }		
 function focuson(b,at=0){if(b!==null){
 						b.scrollIntoView({inline:"end"});
 						b.style.borderColor='purple';b.style.borderStyle='double none';
