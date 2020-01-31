@@ -126,15 +126,25 @@ function divein(a){
 	//if(a!==null)
 	//if(a.tagName!=='BODY'&&a.className==='flding')
 	//a.childNodes[1].click();
-
+let x=a;
+// x.childNodes[1].click();	 
   for(;a.tagName!=='BODY';a=a.parentElement)if(a.className==='flding')
-	       { //console.log(a.childNodes)
+	       {   //console.log(a.childNodes)
 			   let b=a.childNodes[1];
 			   //b.checked = true;
-			   b.checked = !b.checked;
-			   }
+	//		   console.log(b);
+			   //console.log("before "+b.checked);
 			   
-} /*	 
+			   //b.checked = !b.checked;
+			   if(!b.checked)b.click();
+		//	   console.log("after "+b.checked);
+			   //break;
+			   }
+focuson(x);
+			   
+} /*			   
+//x.childNodes[1].click();			   
+
   *
   https://jsfiddle.net/fjaeger/L9z9t04p/4/ 
   function toggleA() {
