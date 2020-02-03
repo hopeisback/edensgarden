@@ -122,27 +122,42 @@ function loadfile(){
 //	function diveto(){let a=location.hash,al=a.length;if(al)return a.substr(1,al-1);return null;}//	location is	window.location,
 //function diveto(){let a=location.hash,al=a.length;						if(al)return a.substr(1,al-1);return null;}						
 /////////
-function divein(a){
-	//if(a!==null)
+function divein(a){// working with inner href "javascript:void(0);" onclick="relocateid('');return false;" and as a link
+	if(a!==null)
+{let x=a;for(;a.tagName!=='BODY';a=a.parentElement)if(a.className==='flding')
+	     {let b=a.childNodes[1];if(!b.checked)b.click();}
+	focuson(x);
+	
+	// 
+	//console.log(browser.tabs.reload(2, {bypassCache: true}));
+//if (navigator.userAgent.indexOf("Chrome") > -1)   console.log( "Google Chrome or Chromium user, please switch between tabs (to fix google rendering bug) ");
+  
+//	document.location.reload(true);
+	 //location.reload(); 
+	//	window.reload() ;
+//location.reload();
+	}}
 	//if(a.tagName!=='BODY'&&a.className==='flding')
 	//a.childNodes[1].click();
-let x=a;
+
 // x.childNodes[1].click();	 
-  for(;a.tagName!=='BODY';a=a.parentElement)if(a.className==='flding')
-	       {   //console.log(a.childNodes)
-			   let b=a.childNodes[1];
+
+			   //console.log(a.childNodes)
 			   //b.checked = true;
 	//		   console.log(b);
 			   //console.log("before "+b.checked);
 			   
 			   //b.checked = !b.checked;
-			   if(!b.checked)b.click();
+			   
 		//	   console.log("after "+b.checked);
 			   //break;
-			   }
-focuson(x);
 			   
-} /*			   
+
+//https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs
+//browser.tabs.update();
+//browser.tabs.reload();
+			   
+ /*			   
 //x.childNodes[1].click();			   
 
   *
@@ -242,15 +257,15 @@ function relocate(a=location.hash){
 	let al=a.length,f=a.lastIndexOf("+");//test with #comcomizedabout+greencomcom
 	// alert("no a")
 //console.log("a"a);
- if(f===-1) recrelocate(a,al);
- else{ 
-	 
-	let b=	 focuson(document.getElementById(a.substr(f+1,al-1)));     
+ if(f===-1) {recrelocate(a,al); //
+	 //location.reload();
+	 // reload() ;
+	  }
+ else{ console.log("relocate f=== " +f);
+	   let b=	 focuson(document.getElementById(a.substr(f+1,al-1)));     
 	 //console.log(f); 
 	 recrelocate(a,f);
-	
-
-window.location.href = window.location.href;
+     window.location.href = window.location.href;}}
 	// browser.tabs.reload({bypassCache: true});
 //	 location.reload(true); 
 	 
@@ -259,11 +274,11 @@ window.location.href = window.location.href;
      //browser.tabs.reload();
      //location.reload() ;   
      //b.focus();
-            }
+            
             //location.reload() ;
        //browser.runtime.reload();     
           //browser.tabs.reload();
-            }  			      
+              			      
    			      
     
 	
