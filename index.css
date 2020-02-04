@@ -18,6 +18,7 @@ input[type='text']  { width: 50%;}
 * */
 input[type='text']  { width: 50%;}
 input[type='checkbox']  { display: none;}
+textarea{  border:1px solid #999999;  width:50%;  margin:5px 0;  padding:3px;}
 .fcontent   { max-height: 0px;  overflow: hidden;  transition: max-height .25s ease-in-out;}
 .fcontent .content-inner{border-bottom: 1px solid rgba(0,255,0,0.3);}
 .toggle:checked + .lbl-toggle + .fcontent {max-height: none;}

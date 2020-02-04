@@ -1,4 +1,17 @@
 // under humanitarian agpl license:  You are not allowed to use, produce from or design from this or its part, anything contained with the aim to kill, to torture, or without their consent, to cause harm to or to monitor people and any permission beside this restriction is granted here only under the Agpl License! https://hopeisback.com/#hagpl
+function sendform(a,b,c){ //	console.log(document.getElementById(b).value );	console.log(document.getElementById(c).value );
+		return (a+	
+		"The Subject is: "+	
+		document.getElementById(b).value+
+		"@End"+
+		document.getElementById(c).value)}
+		/*
+		+
+		document.getElementById
+		document.getElementById(b).innerHTML+
+		document.getElementById(c).innerHTML);	
+		
+				}*/
 function contentApply(container,txt){
 	let	bein = container.children[0].checked,
 		bebefore = container.children[1].checked;
@@ -122,7 +135,7 @@ function loadfile(){
 //	function diveto(){let a=location.hash,al=a.length;if(al)return a.substr(1,al-1);return null;}//	location is	window.location,
 //function diveto(){let a=location.hash,al=a.length;						if(al)return a.substr(1,al-1);return null;}						
 /////////
-function divein(a){// working with inner href "javascript:void(0);" onclick="relocateid('');return false;" and as a link
+function divein(a){// working with inner <a href= "javascript:void(0);" onclick="go('id');"> and as external link #id
 	if(a!==null)
 {let x=a;for(;a.tagName!=='BODY';a=a.parentElement)if(a.className==='flding')
 	     {let b=a.childNodes[1];if(!b.checked)b.click();}
@@ -243,16 +256,16 @@ function relocate1(a=location.hash){let al=a.length;if(al)
 					goto(document.getElementById(a.substr(1,al-1)));}//  relocate is trigged by url when <body onfocus="relocate()"> and <a   href="#idname"   target="_blank">, 
 
 //relocateid=>go2
-function go2(i){location.hash=i;relocate();
+function go3(i){location.hash=i;go2();
 	window.reload() ;
 	return true///	false
 	;}
 
 
-function relocateid(i){location.hash=i;relocate();return false;}// relocateid is in the same page trigged only by <a href="javascript:void(0);"  onclick="relocateid('idname');return false;"> //No browser loading new or  refreshing the same page. JavaScript void is often used when, inserting an expression into a web page may produce an unwanted side-effect. By using JavaScript:Void(0), you can eliminate the unwanted side-effect, because it will return the undefined primative value. More see https://www.quackit.com/javascript/tutorial/javascript_void_0.cfm
+function go(i){location.hash=i;go2();return false;}// go is in the same page trigged only by <a href="javascript:void(0);"  onclick="go('idname');return false;"> //No browser loading new or  refreshing the same page. JavaScript void is often used when, inserting an expression into a web page may produce an unwanted side-effect. By using JavaScript:Void(0), you can eliminate the unwanted side-effect, because it will return the undefined primative value. More see https://www.quackit.com/javascript/tutorial/javascript_void_0.cfm
 /////////goto(document.getElementById(i));
 							
-function relocate(a=location.hash){
+function go2(a=location.hash){
 	if(!a) return;
 	let al=a.length,f=a.lastIndexOf("+");//test with #comcomizedabout+greencomcom
 	// alert("no a")
