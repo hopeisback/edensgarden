@@ -1,17 +1,11 @@
 // under humanitarian agpl license:  You are not allowed to use, produce from or design from this or its part, anything contained with the aim to kill, to torture, or without their consent, to cause harm to or to monitor people and any permission beside this restriction is granted here only under the Agpl License! https://hopeisback.com/#hagpl
-function sendform(a,b,c){ //	console.log(document.getElementById(b).value );	console.log(document.getElementById(c).value );
+function sendform(a,b,c){ 
 		return (a+	
-		"The Subject is: "+	
+		"The title is: "+	
 		document.getElementById(b).value+
-		"@End"+
-		document.getElementById(c).value)}
-		/*
-		+
-		document.getElementById
-		document.getElementById(b).innerHTML+
-		document.getElementById(c).innerHTML);	
-		
-				}*/
+		"@ItsEnd"+
+		document.getElementById(c).value);}
+	
 function contentApply(container,txt){
 	let	bein = container.children[0].checked,
 		bebefore = container.children[1].checked;
