@@ -1,7 +1,7 @@
 # edensgarden
 The working process of https://edensgarden.hopeisback.com/ made under the [humanitarian agpl license](https://github.com/hopeisback/edensgarden/blob/master/LICENSE). 
 * The  comcomist/edensgarden hopeisback [branch](https://github.com/comcomist/edensgarden/tree/hopeisback) is made only for cloned pull requests from here.
-* This makes the official version be in control of [comcomist@github](https://github.com/comcomist), acting as a regulator that can force rules, roles and tests, before publishing, while that process is fully transparent.
+* This makes the official version be in control of [comcomist@github](https://github.com/comcomist), acting as a regulator able to enforce rules, roles and tests, before publishing, while that process is fully transparent.
 # How this site is made
 * This git belongs to group of [members](https://github.com/orgs/hopeisback/people), of which each is a [github user](https://github.com/login) acting as admin of one or more groups.
 * The data of each group is public and seats in different directory of the git.
