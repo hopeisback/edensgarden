@@ -3,4 +3,7 @@ The hopeisback branch in https://github.com/comcomist/edensgarden is made only f
 
 # How this site is made
 * This git belongs to group of members, of which each is a github user acting as admin of one or more groups.
-The data of each group is public and seats in different directory of the git Each admin has a local copy of all the git and all admins are listening to any of the git's changes. The name of each group has more than 2 characters, while other directory names are reserved for our key/code words. In each directory the collapsible index.html is able to contain nicely a lot of searchable and referable information without context lost while being translated to any language in another index file having its proper extension.
+* The data of each group is public and seats in different directory of the git.
+* Each admin has a local copy of all the git and all admins are listening to any of the git's changes. 
+* The name of each group has more than 2 characters, while other directory names are reserved for our key/code words.
+* In each directory the collapsible index.html is able to contain nicely a lot of searchable and referable information without context lost while being translated to any language in another index file having its proper extension.
